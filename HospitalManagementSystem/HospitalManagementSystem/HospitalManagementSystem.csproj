@@ -168,8 +168,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AmbulancesController.cs" />
+    <Compile Include="Controllers\AssignedDoctorsAndPatientsController.cs" />
+    <Compile Include="Controllers\AttendencesController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\DoctorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MedicineRecordsController.cs" />
+    <Compile Include="Controllers\PatientsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -282,6 +289,41 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Patients\Create.cshtml" />
+    <Content Include="Views\Patients\Delete.cshtml" />
+    <Content Include="Views\Patients\Details.cshtml" />
+    <Content Include="Views\Patients\Edit.cshtml" />
+    <Content Include="Views\Patients\Index.cshtml" />
+    <Content Include="Views\Ambulances\Create.cshtml" />
+    <Content Include="Views\Ambulances\Delete.cshtml" />
+    <Content Include="Views\Ambulances\Details.cshtml" />
+    <Content Include="Views\Ambulances\Edit.cshtml" />
+    <Content Include="Views\Ambulances\Index.cshtml" />
+    <Content Include="Views\AssignedDoctorsAndPatients\Create.cshtml" />
+    <Content Include="Views\AssignedDoctorsAndPatients\Delete.cshtml" />
+    <Content Include="Views\AssignedDoctorsAndPatients\Details.cshtml" />
+    <Content Include="Views\AssignedDoctorsAndPatients\Edit.cshtml" />
+    <Content Include="Views\AssignedDoctorsAndPatients\Index.cshtml" />
+    <Content Include="Views\Attendences\Create.cshtml" />
+    <Content Include="Views\Attendences\Delete.cshtml" />
+    <Content Include="Views\Attendences\Details.cshtml" />
+    <Content Include="Views\Attendences\Edit.cshtml" />
+    <Content Include="Views\Attendences\Index.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
+    <Content Include="Views\Doctors\Create.cshtml" />
+    <Content Include="Views\Doctors\Delete.cshtml" />
+    <Content Include="Views\Doctors\Details.cshtml" />
+    <Content Include="Views\Doctors\Edit.cshtml" />
+    <Content Include="Views\Doctors\Index.cshtml" />
+    <Content Include="Views\MedicineRecords\Create.cshtml" />
+    <Content Include="Views\MedicineRecords\Delete.cshtml" />
+    <Content Include="Views\MedicineRecords\Details.cshtml" />
+    <Content Include="Views\MedicineRecords\Edit.cshtml" />
+    <Content Include="Views\MedicineRecords\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

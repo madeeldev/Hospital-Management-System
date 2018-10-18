@@ -1,31 +1,216 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>DOCTOR - Responsive HTML &amp; Bootstrap Template</title>
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+    <script src="js/modernizr.js"></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    @*<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - Hospital Management System</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+</head>
+<body>
+    <section class="slider" id="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="header-backup"></div>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+                        <div class="item active">
+                            <img src="img/slide-two.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h1>Doctors</h1>
+                                <p>Doctors Records can be Added or Modified</p>
+
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="img/slide-one.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h1>Patient</h1>
+                                <p>Patient Records can be Added or Modified</p>
+
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="img/slide-four.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h1>Attendence</h1>
+                                <p>Attendence can be Recorded or Modified</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carouselHacked" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carouselHacked" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section><!-- end of slider section -->
+    <!-- about section -->
+    <section class="about text-center" id="about">
+        <div class="container">
+            <div class="row">
+                <h2>about</h2>
+                <h4>A hospital management system (HMS) is a computer or web based system that facilitates managing the functioning of the hospital or any medical set up.</h4>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-about-detail clearfix">
+
+                        <div class="about-details">
+                            <div class="pentagon-text">
+                                <h1>D</h1>
+                            </div>
+                            <h3>Doctors</h3>
+                            <p>Doctors can Add Patients and Give them Medicine. Can check Patients Medical Records</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-about-detail">
+
+                        <div class="about-details">
+                            <div class="pentagon-text">
+                                <h1>P</h1>
+                            </div>
+
+                            <h3>Patient</h3>
+                            <p>Patient can get Appointment from the Doctor. Call the Ambulance using the Ambulance Module</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-about-detail">
+
+                        <div class="about-details">
+                            <div class="pentagon-text">
+                                <h1>A</h1>
+                            </div>
+                            <h3>Admin</h3>
+                            <p>Admin can Manage all the Records related to Staff Members, Departments and Ambulances</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- end of about section -->
+    <!-- service section starts here -->
+    <section class="service text-center" id="service">
+        <div class="container">
+            <div class="row">
+                <h2>services</h2>
+                <h4>Services to Provide Inventory, Medical Suppourt & Optical Path Finder</h4>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-service">
+                        <div class="single-service-img">
+                            <div class="service-img">
+                                <img class="heart img-responsive" src="img/service1.png" alt="">
+                            </div>
+                        </div>
+                        <h3>Inventory</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-service">
+                        <div class="single-service-img">
+                            <div class="service-img">
+                                <img class="brain img-responsive" src="img/service2.png" alt="">
+                            </div>
+                        </div>
+                        <h3>Ambulance System</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-service">
+                        <div class="single-service-img">
+                            <div class="service-img">
+                                <img class="knee img-responsive" src="img/service3.png" alt="">
+                            </div>
+                        </div>
+                        <h3>Optical Path Finder</h3>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-service">
+                        <div class="single-service-img">
+                            <div class="service-img">
+                                <img class="bone img-responsive" src="img/service4.png" alt="">
+                            </div>
+                        </div>
+                        <h3>Attendence System</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- end of service section -->
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Hospital Management System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Doctor", "Index", "Doctors")</li>
+                        <li>@Html.ActionLink("Patient", "Index", "Patients")</li>
+                        <li>@Html.ActionLink("Appointments", "Index", "AssignedDoctorsAndPatients")</li>
+                        <li>@Html.ActionLink("Attendance", "Index", "Attendences")</li>
+                        <li>@Html.ActionLink("Departments", "Index", "Departments")</li>
+                        <li>@Html.ActionLink("Medicines", "Index", "MedicineRecords")</li>
+                        <li>@Html.ActionLink("Ambulances", "Index", "Ambulances")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    
+
+    <!-- script tags
+    ============================================================= -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/gmaps.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    
+
+</body>
+</html>
+

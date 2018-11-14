@@ -22,6 +22,7 @@ namespace Hospital_Management_System.Models
     {
         public DbSet<Department> Department { get; set; }
         public DbSet<Ambulance> Ambulance { get; set; }
+        public DbSet<AmbulanceDriver> AmbulanceDriver { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

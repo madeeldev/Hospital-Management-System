@@ -169,8 +169,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DoctorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -194,9 +196,14 @@
     <Compile Include="Migrations\201811121704028_AddAmbulanceInDb.Designer.cs">
       <DependentUpon>201811121704028_AddAmbulanceInDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811140612190_AddAmbulanceDriverInDB.cs" />
+    <Compile Include="Migrations\201811140612190_AddAmbulanceDriverInDB.Designer.cs">
+      <DependentUpon>201811140612190_AddAmbulanceDriverInDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ambulance.cs" />
+    <Compile Include="Models\AmbulanceDriver.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DepartmentStatus.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -481,6 +488,9 @@
     <Content Include="Views\Admin\EditDepartment.cshtml" />
     <Content Include="Views\Admin\DeleteDepartment.cshtml" />
     <Content Include="Views\Shared\_DoctorLayout.cshtml" />
+    <Content Include="Views\Doctor\Index.cshtml" />
+    <Content Include="Views\Shared\_PatientLayout.cshtml" />
+    <Content Include="Views\Patient\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -509,6 +519,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811121704028_AddAmbulanceInDb.resx">
       <DependentUpon>201811121704028_AddAmbulanceInDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811140612190_AddAmbulanceDriverInDB.resx">
+      <DependentUpon>201811140612190_AddAmbulanceDriverInDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

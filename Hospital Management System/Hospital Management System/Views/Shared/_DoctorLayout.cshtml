@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin | DashBoard</title>
+    <title>Doctor | DashBoard</title>
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/Content/css/font-awesome.min.css" rel="stylesheet">
     <link href="~/Content/css/datepicker3.css" rel="stylesheet">
@@ -24,7 +24,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><span>DashBoard</span>Admin</a>
+                <a class="navbar-brand" href="#"><span>DashBoard</span>Doctor</a>
                 <ul class="nav navbar-top-links navbar-right"></ul>
             </div>
         </div><!-- /.container-fluid -->
@@ -45,10 +45,9 @@
             <li class="active"><a href="@Url.Action("Index", "Admin")"><em class="fa fa-dashboard">&nbsp;</em> DashBoard</a></li>
 
             <li>
-                <button class="collapsible"><em class="fa fa-building-o">&nbsp; &nbsp;</em>Department</button>
+                <button class="collapsible"><em class="fa fa-building-o">&nbsp; &nbsp;</em>Patients</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Add Department", "AddDepartment", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px" })
-                    @Html.ActionLink("Department List", "DepartmentList", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px" })
+                    @Html.ActionLink("Patients List", "AddDepartment", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px" })
                 </div>
             </li>
             <li><a href="@Url.Action("Index", "Home")"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>

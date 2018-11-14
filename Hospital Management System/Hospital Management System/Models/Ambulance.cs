@@ -13,8 +13,11 @@ namespace Hospital_Management_System.Models
         public string Name { get; set; }
         [Required]
         public string AmbulanceId { get; set; }
-        [Required]
-        public string AssignDriver { get; set; }
+        [Required]             
+        public string AmbulanceStatus { get; set; }
 
+        public Ambulance Ambulances { get; set; }
+
+        public int AmbulancesId { get; set; }
     }
 }

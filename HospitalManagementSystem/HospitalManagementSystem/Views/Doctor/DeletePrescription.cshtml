@@ -1,0 +1,54 @@
+﻿@model HospitalManagementSystem.Models.Prescriptions
+@{
+    ViewBag.Title = "DeletePrescription";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+
+
+
+<div class="row">
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">
+                <em class="fa fa-home"></em>
+            </a>
+        </li>
+        <li class="active">Prescription</li>
+        <li class="active">Delete Prescription</li>
+    </ol>
+</div>
+
+<h2>Delete Prescription</h2>
+<h3>Are you sure you want to delete this?</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientsId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientsId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prescription)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to PrescriptionList", "PrescriptionsList")
+        </div>
+    }
+</div>

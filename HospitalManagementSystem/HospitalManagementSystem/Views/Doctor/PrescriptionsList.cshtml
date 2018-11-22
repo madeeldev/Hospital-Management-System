@@ -1,0 +1,61 @@
+﻿@model IEnumerable<HospitalManagementSystem.Models.Prescriptions>
+@{
+    ViewBag.Title = "Prescriptions";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+
+<div class="row">
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">
+                <em class="fa fa-home"></em>
+            </a>
+        </li>
+        <li class="active">Prescriptions</li>
+        <li class="active">Prescriptions List</li>
+    </ol>
+</div>
+
+<h2>Prescriptions List</h2>
+
+<table id="table_id" class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PatientsId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prescription)
+        </th>
+
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientsId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prescription)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "EditPrescription", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "DeletePrescription", new { id = item.Id })
+            </td>
+        </tr>
+    }
+    </tbody>
+
+</table>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $("#table_id").dataTable();
+        });
+    </script>
+}

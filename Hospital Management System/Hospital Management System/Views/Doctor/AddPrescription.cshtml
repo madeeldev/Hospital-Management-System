@@ -1,0 +1,192 @@
+﻿@using System.Web.UI.WebControls
+@model Hospital_Management_System.CollectionViewModels.PrescriptionCollection
+
+@{
+    ViewBag.Title = "AddPrescription";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+
+<h2>AddPrescription</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Prescription</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prescription.PatientId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Prescription.PatientId, new SelectList(Model.Patients, "Id", "FullName"), "Select Patient", new { @id = "dropdown", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Prescription.PatientId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prescription.MedicalTest1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Prescription.MedicalTest1, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Test 1" } })
+                @Html.ValidationMessageFor(model => model.Prescription.MedicalTest1, "", new { @class = "text-danger" })
+                <br />
+                @Html.EditorFor(model => model.Prescription.MedicalTest2, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Test 2" } })
+                @Html.ValidationMessageFor(model => model.Prescription.MedicalTest2, "", new { @class = "text-danger" })
+                <br />
+                @Html.EditorFor(model => model.Prescription.MedicalTest3, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Test 3" } })
+                @Html.ValidationMessageFor(model => model.Prescription.MedicalTest3, "", new { @class = "text-danger" })
+                <br />
+                @Html.EditorFor(model => model.Prescription.MedicalTest4, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Test 4" } })
+                @Html.ValidationMessageFor(model => model.Prescription.MedicalTest4, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prescription.Medicine1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Prescription.Medicine1, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Medicine 1" } })
+                @Html.ValidationMessageFor(model => model.Prescription.Medicine1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(m => m.Prescription.Morning1, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.Prescription.Morning1, "Morning", new { @class = "radio-inline" }) @Html.Label("Morning")
+                @Html.RadioButtonFor(m => m.Prescription.Afternoon1, "Afternoon", new { @class = "radio-inline" })  @Html.Label("Afternoon")
+                @Html.RadioButtonFor(m => m.Prescription.Evening1, "Evening", new { @class = "radio-inline" })  @Html.Label("Evening")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prescription.Medicine1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Prescription.Medicine2, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Medicine 2" } })
+                @Html.ValidationMessageFor(model => model.Prescription.Medicine2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(m => m.Prescription.Morning1, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.Prescription.Morning2, "Morning", new { @class = "radio-inline" }) @Html.Label("Morning")
+                @Html.RadioButtonFor(m => m.Prescription.Afternoon2, "Afternoon", new { @class = "radio-inline" })  @Html.Label("Afternoon")
+                @Html.RadioButtonFor(m => m.Prescription.Evening2, "Evening", new { @class = "radio-inline" })  @Html.Label("Evening")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prescription.Medicine1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Prescription.Medicine3, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Medicine 3" } })
+                @Html.ValidationMessageFor(model => model.Prescription.Medicine3, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Prescription.Morning1, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.Prescription.Morning3, "Morning", new { @class = "radio-inline" }) @Html.Label("Morning")
+                @Html.RadioButtonFor(m => m.Prescription.Afternoon3, "Afternoon", new { @class = "radio-inline" })  @Html.Label("Afternoon")
+                @Html.RadioButtonFor(m => m.Prescription.Evening3, "Evening", new { @class = "radio-inline" })  @Html.Label("Evening")
+            </div>
+        </div>    
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prescription.Medicine1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Prescription.Medicine4, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Medicine 4" } })
+                @Html.ValidationMessageFor(model => model.Prescription.Medicine4, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Prescription.Morning1, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.Prescription.Morning4, "Morning", new { @class = "radio-inline" }) @Html.Label("Morning")
+                @Html.RadioButtonFor(m => m.Prescription.Afternoon4, "Afternoon", new { @class = "radio-inline" })  @Html.Label("Afternoon")
+                @Html.RadioButtonFor(m => m.Prescription.Evening4, "Evening", new { @class = "radio-inline" })  @Html.Label("Evening")
+            </div>
+        </div>    
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prescription.Medicine1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Prescription.Medicine5, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Medicine 5" } })
+                @Html.ValidationMessageFor(model => model.Prescription.Medicine5, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Prescription.Morning1, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.Prescription.Morning5, "Morning", new { @class = "radio-inline" }) @Html.Label("Morning")
+                @Html.RadioButtonFor(m => m.Prescription.Afternoon5, "Afternoon", new { @class = "radio-inline" })  @Html.Label("Afternoon")
+                @Html.RadioButtonFor(m => m.Prescription.Evening5, "Evening", new { @class = "radio-inline" })  @Html.Label("Evening")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prescription.Medicine1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Prescription.Medicine6, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Medicine 6" } })
+                @Html.ValidationMessageFor(model => model.Prescription.Medicine6, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Prescription.Morning1, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.Prescription.Morning6, "Morning", new { @class = "radio-inline" }) @Html.Label("Morning")
+                @Html.RadioButtonFor(m => m.Prescription.Afternoon6, "Afternoon", new { @class = "radio-inline" })  @Html.Label("Afternoon")
+                @Html.RadioButtonFor(m => m.Prescription.Evening6, "Evening", new { @class = "radio-inline" })  @Html.Label("Evening")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prescription.Medicine1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Prescription.Medicine7, new { htmlAttributes = new { @class = "form-control", PlaceHolder = "Medicine 7" } })
+                @Html.ValidationMessageFor(model => model.Prescription.Medicine7, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Prescription.Morning1, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.RadioButtonFor(m => m.Prescription.Morning7, "Morning", new { @class = "radio-inline" }) @Html.Label("Morning")
+                @Html.RadioButtonFor(m => m.Prescription.Afternoon7, "Afternoon", new { @class = "radio-inline" })  @Html.Label("Afternoon")
+                @Html.RadioButtonFor(m => m.Prescription.Evening7, "Evening", new { @class = "radio-inline" })  @Html.Label("Evening")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prescription.CheckUpAfterDays, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Prescription.CheckUpAfterDays, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Prescription.CheckUpAfterDays, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(function() {
+            $("#dropdown").chosen();
+        });
+    </script>
+}

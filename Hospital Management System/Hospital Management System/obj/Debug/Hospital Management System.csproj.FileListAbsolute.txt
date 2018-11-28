@@ -1,0 +1,265 @@
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\csc.exe
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\System.Collections.Immutable.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\System.Reflection.Metadata.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\vbc.exe
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\VBCSCompiler.exe
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\roslyn\VBCSCompiler.exe.config
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Hospital Management System.dll.config
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Hospital Management System.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Hospital Management System.pdb
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Antlr3.Runtime.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\EntityFramework.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\EntityFramework.SqlServer.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Core.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Cookies.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Facebook.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Google.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.OAuth.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Twitter.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Web.Infrastructure.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Newtonsoft.Json.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Owin.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.Helpers.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.Mvc.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.Optimization.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.Razor.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Deployment.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Razor.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\WebGrease.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.Helpers.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.Mvc.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.Optimization.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.Razor.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Deployment.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Razor.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Antlr3.Runtime.pdb
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Newtonsoft.Json.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\EntityFramework.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\EntityFramework.SqlServer.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Core.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Facebook.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Cookies.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.OAuth.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Google.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Twitter.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\University\SE Project\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.csprojResolveAssemblyReference.cache
+D:\University\SE Project\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.dll
+D:\University\SE Project\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.pdb
+D:\University\SE Project\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.initialModel.resources
+D:\University\SE Project\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.csproj.GenerateResource.Cache
+D:\University\SE Project\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddDepartmentInDB.resources
+D:\University\SE Project\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddReqiuredFieldInDepartment.resources
+D:\University\SE Project\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddUserNameToRegisterViewModel.resources
+D:\University\SE Project\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceInDb.resources
+D:\University\SE Project\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceDriverInDB.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\csc.exe
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\vbc.exe
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\VBCSCompiler.exe
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Hospital Management System.dll.config
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Hospital Management System.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Hospital Management System.pdb
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Antlr3.Runtime.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\EntityFramework.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\EntityFramework.SqlServer.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Newtonsoft.Json.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Owin.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Helpers.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Mvc.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Optimization.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Razor.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Deployment.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Razor.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\WebGrease.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Helpers.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Mvc.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Optimization.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Razor.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Deployment.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Razor.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Antlr3.Runtime.pdb
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Newtonsoft.Json.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\EntityFramework.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\EntityFramework.SqlServer.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.csprojResolveAssemblyReference.cache
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.initialModel.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddDepartmentInDB.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddReqiuredFieldInDepartment.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddUserNameToRegisterViewModel.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceInDb.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceDriverInDB.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.csproj.GenerateResource.Cache
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.dll
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.pdb
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddUserRole.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.userrole.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.addAmbulanceDriversInDB.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceToDB.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangesInAmbulanceDB.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddMedicineInDB.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddRegisteredDateInAspNetUsersDB.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddPatientInDB.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangeReturnTypeInPatientDb.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.DropDownThePatientInDB.resources
+C:\Users\UsmanPC\Desktop\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddPatientInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\csc.exe
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\System.Collections.Immutable.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\System.Reflection.Metadata.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\vbc.exe
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\VBCSCompiler.exe
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\roslyn\VBCSCompiler.exe.config
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Hospital Management System.dll.config
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Hospital Management System.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Hospital Management System.pdb
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Antlr3.Runtime.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\EntityFramework.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\EntityFramework.SqlServer.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Core.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Cookies.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Facebook.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Google.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.OAuth.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Twitter.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Web.Infrastructure.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Newtonsoft.Json.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Owin.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Helpers.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Mvc.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Optimization.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Razor.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Deployment.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Razor.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\WebGrease.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Helpers.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Mvc.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Optimization.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.Razor.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Deployment.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\System.Web.WebPages.Razor.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Antlr3.Runtime.pdb
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Newtonsoft.Json.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\EntityFramework.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\EntityFramework.SqlServer.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Core.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Facebook.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Cookies.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.OAuth.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Google.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.Twitter.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.csprojResolveAssemblyReference.cache
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.initialModel.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddDepartmentInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddReqiuredFieldInDepartment.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddUserNameToRegisterViewModel.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceInDb.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceDriverInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddUserRole.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.userrole.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.addAmbulanceDriversInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddAmbulanceToDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangesInAmbulanceDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddMedicineInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddRegisteredDateInAspNetUsersDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddPatientInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangeReturnTypeInPatientDb.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.DropDownThePatientInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddPatientInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.csproj.GenerateResource.Cache
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.dll
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital Management System.pdb
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddDoctorInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddScheduleInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangeInScheduleDb.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.DropScheduleForSomeChanges.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddScheduleInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddScheduleInDB1.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddFullNameInDoctorDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddPrescriptionInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.DropPrescriptionForSomeChanges.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddPrescriptionInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AgainAddPrescriptionInDB1.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.dropprescription.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.Prescription.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddFullNameInPatientDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddUserNameInPrescriptionDB.resources

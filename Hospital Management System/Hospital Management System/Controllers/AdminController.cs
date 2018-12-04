@@ -403,7 +403,7 @@ namespace Hospital_Management_System.Controllers
                 };
                 db.Doctors.Add(doctor);
                 db.SaveChanges();
-                return RedirectToAction("ListOfMedicine");
+                return RedirectToAction("ListOfDoctors");
             }
 
             return HttpNotFound();
@@ -462,6 +462,29 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Delete Doctor pending
+        public ActionResult DeleteDoctor(string id)
+        {
+            var UserId = db.Doctors.Single(c => c.ApplicationUserId == id);
+            return View(UserId);
+        }
+
+        [HttpPost, ActionName("DeleteDoctor")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteDoctor(string id, Doctor model)
+        {
+            var doctor = db.Doctors.Single(c => c.ApplicationUserId == id);
+            var user = db.Users.Single(c => c.Id == id);
+            if (db.Schedules.Where(c => c.DoctorId == doctor.Id).Equals(null))
+            {
+                var schedule = db.Schedules.Single(c => c.DoctorId == doctor.Id);
+                db.Schedules.Remove(schedule);
+            }
+            db.Users.Remove(user);
+            db.Doctors.Remove(doctor);
+            db.SaveChanges();
+            return RedirectToAction("ListOfDoctors");
+        }
+
         //End Doctor Section
 
         //Start Schedule Section
@@ -538,6 +561,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Delete Schedule
+        [Authorize]
         public ActionResult DeleteSchedule(int? id)
         {
             return View();
@@ -555,6 +579,12 @@ namespace Hospital_Management_System.Controllers
         //End Schedule Section
 
         //Start Patient Section
+        [Authorize]
+        public ActionResult ListOfPatients()
+        {
+            var patients = db.Patients.ToList();
+            return View(patients);
+        }
        
     }
 }

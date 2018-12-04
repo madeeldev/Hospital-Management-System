@@ -117,5 +117,21 @@ namespace Hospital_Management_System.Controllers
             var prescription = db.Prescription.Single(c => c.PatientId == id);
             return View(prescription);
         }
+
+        [Authorize]
+        public ActionResult DeletePrescription(int? id)
+        {
+            return View();
+        }
+
+        [HttpPost, ActionName("DeletePrescription")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePrescription(int id)
+        {
+            var prescription = db.Prescription.Single(c => c.Id == id);
+            db.Prescription.Remove(prescription);
+            db.SaveChanges();
+            return RedirectToAction("ListOfPrescription");
+        }
     }
 }

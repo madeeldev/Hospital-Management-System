@@ -6,14 +6,25 @@
     Layout = "~/Views/Shared/_DoctorLayout.cshtml";
 }
 
-<h2>AddPrescription</h2>
+<div class="row">
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">
+                <em class="fa fa-home"></em>
+            </a>
+        </li>
+        <li class="active">Prescription</li>
+        <li class="active">Add Prescription</li>
+    </ol>
+</div>
+
+<h2>Add Prescription</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Prescription</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 

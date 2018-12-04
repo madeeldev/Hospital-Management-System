@@ -309,6 +309,14 @@
     <Compile Include="Migrations\201811250835246_AddUserNameInPrescriptionDB.Designer.cs">
       <DependentUpon>201811250835246_AddUserNameInPrescriptionDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811281204051_ChangeLongtoStringInPatient.cs" />
+    <Compile Include="Migrations\201811281204051_ChangeLongtoStringInPatient.Designer.cs">
+      <DependentUpon>201811281204051_ChangeLongtoStringInPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811300800433_AddReviewsInDB.cs" />
+    <Compile Include="Migrations\201811300800433_AddReviewsInDB.Designer.cs">
+      <DependentUpon>201811300800433_AddReviewsInDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ambulance.cs" />
@@ -321,6 +329,7 @@
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\Prescription.cs" />
+    <Compile Include="Models\Reviews.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -462,6 +471,28 @@
     <Content Include="Content\js\lumino.glyphs.js" />
     <Content Include="Content\js\npm.js" />
     <Content Include="Content\js\respond.min.js" />
+    <Content Include="Content\Layout\resources\css\img\banner.jpg" />
+    <Content Include="Content\Layout\resources\css\img\hospital-174924_1280.jpg" />
+    <Content Include="Content\Layout\resources\css\queries.css" />
+    <Content Include="Content\Layout\resources\css\style.css" />
+    <Content Include="Content\Layout\resources\img\app-iPhone.png" />
+    <Content Include="Content\Layout\resources\img\customer-1.jpg" />
+    <Content Include="Content\Layout\resources\img\customer-2.jpg" />
+    <Content Include="Content\Layout\resources\img\customer-3.jpg" />
+    <Content Include="Content\Layout\resources\img\Faislabad.jpg" />
+    <Content Include="Content\Layout\resources\img\Gujranwala.jpg" />
+    <Content Include="Content\Layout\resources\img\Lahore.jpg" />
+    <Content Include="Content\Layout\resources\img\logo-white.jpg" />
+    <Content Include="Content\Layout\resources\img\logo.jpg" />
+    <Content Include="Content\Layout\resources\img\Multan.png" />
+    <Content Include="Content\Layout\resources\js\script.js" />
+    <Content Include="Content\Layout\vendors\css\animate.css" />
+    <Content Include="Content\Layout\vendors\css\grid.css" />
+    <Content Include="Content\Layout\vendors\css\ionicons.min.css" />
+    <Content Include="Content\Layout\vendors\css\normalize.css" />
+    <Content Include="Content\Layout\vendors\fonts\ionicons.svg" />
+    <Content Include="Content\Layout\vendors\js\jquery.waypoints.min.js" />
+    <Content Include="Content\LogIn\LoginStyle.css" />
     <Content Include="Content\resume.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -488,6 +519,12 @@
     <Content Include="Content\sass\styles.scss" />
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="Content\Layout\resources\css\img\Thumbs.db" />
+    <Content Include="Content\Layout\resources\img\Thumbs.db" />
+    <Content Include="Content\Layout\vendors\fonts\ionicons.eot" />
+    <Content Include="Content\Layout\vendors\fonts\ionicons.ttf" />
+    <Content Include="Content\Layout\vendors\fonts\ionicons.woff" />
+    <Content Include="Content\Layout\vendors\fonts\ionicons.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chosen.jquery.min.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
@@ -561,6 +598,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Loginjs.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -586,7 +624,6 @@
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
@@ -632,9 +669,14 @@
     <Content Include="Views\Doctor\AddPrescription.cshtml" />
     <Content Include="Views\Doctor\ListOfPrescription.cshtml" />
     <Content Include="Views\Doctor\ViewPrescription.cshtml" />
+    <Content Include="Views\Admin\DeleteDoctor.cshtml" />
+    <Content Include="Views\Admin\ListOfPatients.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Doctor\DeletePrescription.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Layout\resources\data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -740,6 +782,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811250835246_AddUserNameInPrescriptionDB.resx">
       <DependentUpon>201811250835246_AddUserNameInPrescriptionDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811281204051_ChangeLongtoStringInPatient.resx">
+      <DependentUpon>201811281204051_ChangeLongtoStringInPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811300800433_AddReviewsInDB.resx">
+      <DependentUpon>201811300800433_AddReviewsInDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

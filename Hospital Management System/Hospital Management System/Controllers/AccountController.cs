@@ -93,7 +93,7 @@ namespace Hospital_Management_System.Controllers
                     else if (UserManager.IsInRole(user.Id, "Patient"))
                     {
                         var patient = db.Patients.Single(c => c.ApplicationUserId == user.Id);
-                        if (patient.BloodGroup == null || patient.Contact == 0 || patient.Gender == null)
+                        if (patient.BloodGroup == null || patient.Contact == null || patient.Gender == null)
                         {
                             return RedirectToAction("UpdateProfile", "Patient", new {id = user.Id});
                         }

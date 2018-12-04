@@ -263,3 +263,5 @@ D:\University\Project\Hospital-Management-System\Hospital Management System\Hosp
 D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.Prescription.resources
 D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddFullNameInPatientDB.resources
 D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddUserNameInPrescriptionDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.ChangeLongtoStringInPatient.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Debug\Hospital_Management_System.Migrations.AddReviewsInDB.resources

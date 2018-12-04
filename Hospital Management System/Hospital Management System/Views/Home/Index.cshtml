@@ -1,31 +1,306 @@
-﻿@{
+﻿@using System.Web.UI.WebControls
+@using Hospital_Management_System.Models
+@model Hospital_Management_System.Models.Reviews
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<header id="Home">
+    <nav>
+        <div class="row">
+            <img src="~/Content/Layout/resources/img/logo-white.jpg" alt="HMS logo" class="logo">
+            <img src="~/Content/Layout/resources/img/logo.jpg" alt="HMS logo" class="logo-black">
+            <ul class="main-nav js-main-nav">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="@Url.Action("Register", "Account")">Register</a></li>
+                <li><a href="@Url.Action("Login", "Account")">Sign In</a></li>
+            </ul>
+            <a class="mobile-nav-icon js-mobile-nav-icon"><i class="ion-ios-menu"></i></a>
+        </div>
+    </nav>
+    <div class="hero-text-box">
+        <h1>Hospital Management<br> System.</h1>
+        <br>
+        <a class="btn btn-ghost js-scroll-to-start" href="#">Show me more</a>
+    </div>
+</header>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<section class="section-features js-section-features" id="services">
+    <div class="row">
+        <h2>Services</h2>
+        <p class="long-copy">Hello, this is Hospital Management System. We have best services for our patients and manage them.</p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="row js-wp-1">
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-medkit"></i>
+            <h3>Emergency Care</h3>
+            <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.</p>
+        </div>
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-call"></i>
+            <h3>Call Center 24/7</h3>
+            <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
+        </div>
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-car"></i>
+            <h3>Ambulance</h3>
+            <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
+        </div>
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-checkmark-circle-outline"></i>
+            <h3>Appointment</h3>
+            <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!</p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+</section>
+
+<section class="section-steps" id="about">
+    <div class="row">
+        <h2>About Us &mdash; Our Vision</h2>
     </div>
-</div>
+    <div class="row">
+        <div class="col span-1-of-2 step-box">
+            <img src="~/Content/Layout/resources/img/app-iPhone.png" alt="Omnifood app on iphone" class="app-screen js-wp-2">
+        </div>
+        <div class="col span-1-of-2 step-box">
+            <div class="works-step">
+                <div>1</div>
+                <p>Hopital Management System (HMS) is open to all patients every day and provides fundamental medical care and cutting-edge medicine.</p>
+            </div>
+            <div class="works-step">
+                <div>2</div>
+                <p>We use our academic knowledge to treat a wide range of health issues, taking a personal touch and utilizing highly specialized and up-to-date research.</p>
+            </div>
+            <div class="works-step">
+                <div>3</div>
+                <p>
+                    We will innovate and define the future of health care for generations
+                    and will be the consumer's first choice for health care.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-cities" id="cities">
+    <div class="row">
+        <h2>We're currently in these cities</h2>
+    </div>
+    <div class="row js-wp-3">
+        <div class="col span-1-of-4 box">
+            <img src="~/Content/Layout/resources/img/Lahore.jpg" alt="lisbon">
+            <h3>Lahore</h3>
+            <div class="city-feature">
+                <i class="icon ion-logo-facebook small-icons"></i>
+                <a href="#">HMS_Lahore</a>
+            </div>
+        </div>
+        <div class="col span-1-of-4 box">
+            <img src="~/Content/Layout/resources/img/Gujranwala.jpg" alt="lisbon">
+            <h3>Gujranwala</h3>
+            <div class="city-feature">
+                <i class="icon ion-logo-facebook small-icons"></i>
+                <a href="#">HMS_Gujranwala</a>
+            </div>
+        </div>
+        <div class="col span-1-of-4 box">
+            <img src="~/Content/Layout/resources/img/Faislabad.jpg" alt="lisbon">
+            <h3>Faislabad</h3>
+            <div class="city-feature">
+                <i class="icon ion-logo-facebook small-icons"></i>
+                <a href="#">HMS_Faislabad</a>
+            </div>
+        </div>
+        <div class="col span-1-of-4 box">
+            <img src="~/Content/Layout/resources/img/Multan.png" alt="lisbon">
+            <h3>Multan</h3>
+            <div class="city-feature">
+                <i class="icon ion-logo-facebook small-icons"></i>
+                <a href="#">HMS_Multan</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-testimonials" id="reviews">
+    <div class="row">
+        <h2>Our patients can't live without us</h2>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-3">
+            <blockquote>HMS is just awesome! I just launched a startup which leaves me with no time for Medicine, so Omnifood is a life-saver. Now that I got used to it</blockquote>
+            <cite><img src="~/Content/Layout/resources/img/customer-1.jpg" alt="first-customer">Alberto Duncan</cite>
+        </div>
+        <div class="col span-1-of-3">
+            <blockquote>Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!</blockquote>
+            <cite><img src="~/Content/Layout/resources/img/customer-2.jpg" alt="first-customer">Joana Silva</cite>
+        </div>
+        <div class="col span-1-of-3">
+            <blockquote>I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!</blockquote>
+            <cite><img src="~/Content/Layout/resources/img/customer-3.jpg" alt="first-customer">Milton Chapman</cite>
+        </div>
+    </div>
+</section>
+
+<section class="section-plans js-section-plans" id="plans">
+    <div class="row">
+        <h2>Start eating healthy today</h2>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-3">
+            <div class="plan-box js-wp-4">
+                <div>
+                    <h3>Premium</h3>
+                    <p class="plan-price">399$ <span>/ month</span></p>
+                    <p class="plan-price-meal">That’s only 13.30$ per meal</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>1 meal every day</li>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>Order 24/7</li>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>Access to newest creations</li>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>Free delivery</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-full">Sign up now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col span-1-of-3">
+            <div class="plan-box">
+                <div>
+                    <h3>Pro</h3>
+                    <p class="plan-price">149$ <span>/ month</span></p>
+                    <p class="plan-price-meal">That’s only 14.90$ per meal</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>1 meal 10 days/month</li>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>Order 24/7</li>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>Access to newest creations</li>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>Free delivery</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-ghost">Sign up now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col span-1-of-3">
+            <div class="plan-box">
+                <div>
+                    <h3>Starter</h3>
+                    <p class="plan-price">19$ <span>/ meal</span></p>
+                    <p class="plan-price-meal">&nbsp;</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>1 meal</li>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>Order from 8 am to 12 pm</li>
+                        <li><i class="icon ion-ios-close small-icons"></i></li>
+                        <li><i class="icon ion-ios-checkmark small-icons"></i>Free delivery</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-ghost">Sign up now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-form" id="contact">
+    <div class="row">
+        <h2>We're happy to hear from you</h2>
+    </div>
+    <div class="row">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new {@class= "contact-form" }))
+        {
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col span-2-of-3">
+                    @Html.TextBoxFor(model => model.Name, null, new { @placeholder = "Your Name" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col span-2-of-3">
+                    @Html.TextBoxFor(model => model.Email, null, new { @PlaceHolder = "Your Email", @id = "email" })
+                </div>
+            </div>
+            var list = new List<Reviews>
+            {
+                new Reviews {FindUs = "Friends"},
+                new Reviews {FindUs = "Search Engine"},
+                new Reviews {FindUs = "Advertisement"},
+                new Reviews {FindUs = "Other"}
+            };
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="find-us">How did you find us?</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        @Html.DropDownListFor(model => model.FindUs, new SelectList(list, "FindUs", "FindUS"), new { @id = "find-us" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>Drop us a line</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        @Html.TextAreaFor(model => model.Message, new { @PlaceHolder = "Your Message" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>&nbsp;</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="submit" value="Send it!">
+                    </div>
+                </div>
+                }
+        <form method="post" action="#" class="contact-form">
+            
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer-nav">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">IOS App</a></li>
+                <li><a href="#">Andriod App</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-links">
+                <li><a href="#"><i class="ion-logo-facebook"></i></a></li>
+                <li><a href="#"><i class="ion-logo-twitter"></i></a></li>
+                <li><a href="#"><i class="ion-logo-googleplus"></i></a></li>
+                <li><a href="#"><i class="ion-logo-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p> Copyright &copy; @DateTime.Now.Year by HMS.All rights reserved.</p>
+    </div>
+</footer>
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

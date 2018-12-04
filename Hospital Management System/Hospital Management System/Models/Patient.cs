@@ -20,14 +20,15 @@ namespace Hospital_Management_System.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
+        [Display(Name = "Name")]
         public string FullName { get; set; }
 
         [EmailAddress]
         [Display(Name = "Email Id")]
         public string EmailAddress { get; set; }
         [Display(Name = "Phone No")]
-        public long PhoneNo { get; set; }
-        public long Contact { get; set; }
+        public string PhoneNo { get; set; }
+        public string Contact { get; set; }
         [Display(Name = "Blood Group")]
         public string BloodGroup { get; set; }
         public string Gender { get; set; }

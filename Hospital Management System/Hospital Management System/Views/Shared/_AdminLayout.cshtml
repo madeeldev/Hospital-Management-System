@@ -11,6 +11,7 @@
     <link href="~/Content/css/datepicker3.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="~/Content/datatables/css/datatables.bootstrap.css">
     <link rel="stylesheet" href="~/Content/Chosen/chosen.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/Layout/resources/img/logo.jpg" />
     <link href="~/Content/css/styles.css" rel="stylesheet">
 
     <!--Custom Font-->
@@ -64,7 +65,7 @@
             <li>
                 <button class="collapsible"><em class="fa fa-user-o">&nbsp; &nbsp;</em>Patient</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Add Patient", "Index", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @Html.ActionLink("List of Patient", "ListOfPatients", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
                 </div>
             </li>
             <li>

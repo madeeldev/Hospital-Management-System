@@ -33,6 +33,7 @@ namespace Hospital_Management_System.Models
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
         public DbSet<Prescription> Prescription { get; set; }
+        public DbSet<Reviews> Reviews { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

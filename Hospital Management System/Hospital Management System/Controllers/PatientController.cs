@@ -48,7 +48,6 @@ namespace Hospital_Management_System.Controllers
             patient.BloodGroup = model.BloodGroup;
             patient.DateOfBirth = model.DateOfBirth;
             patient.Gender = model.Gender;
-            patient.EmailAddress = model.EmailAddress;
             patient.PhoneNo = model.PhoneNo;
             db.SaveChanges();
             return View();

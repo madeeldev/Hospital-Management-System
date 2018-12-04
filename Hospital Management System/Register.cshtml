@@ -1,0 +1,165 @@
+﻿@model Hospital_Management_System.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Login Widget</title>
+  
+  
+    <link rel='stylesheet' href='https://www.google.com/fonts#UsePlace:use/Collection:Roboto:400,300,100,500'>
+    <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://www.google.com/fonts#UsePlace:use/Collection:Roboto+Slab:400,700,300,100'>
+
+    <link rel="stylesheet" href="~/Content/LoginStyle.css">
+
+  
+</head>
+<body>
+    <div id="successful_login" class="fix-middle">
+        <div class="container text-center">
+            <h1>Welcome back to the internet!</h1>
+            <p>You've successfully managed to log into a nonexistant account in order to test a login dialog box.<br> If you like it, you are welcomed to use it wherever you want, no strings attached.<br><br><a href="#" class="link dialog-reset">Rerun the whole thing.</a></p>
+        </div>
+    </div>
+    <div id="successful_registration" class="fix-middle">
+        <div class="container text-center">
+            <h1>Welcome to the internet!</h1>
+            <p>You've successfully managed to register for a nonexistant account in order to test a registration dialog box.<br> If you like it, you are welcomed to use it wherever you want, no strings attached.<br><br><a href="#" class="link dialog-reset">Rerun the whole thing.</a></p>
+        </div>
+    </div>
+    <div id="dialog" class="dialog dialog-effect-in">
+        <div class="dialog-front">
+            <div class="dialog-content">
+                <form id="login_form" class="dialog-form" action="" method="POST">
+                    <fieldset>
+                        <legend>Log in</legend>
+                        <div class="form-group">
+                            <label for="user_username" class="control-label">Username:</label>
+                            <input type="text" id="user_username" class="form-control" name="user_username" autofocus />
+                        </div>
+                        <div class="form-group">
+                            <label for="user_password" class="control-label">Password:</label>
+                            <input type="password" id="user_password" class="form-control" name="user_password" />
+                        </div>
+                        <div class="text-center pad-top-20">
+                            <p>Have you forgotten your<br><a href="#" class="link"><strong>username</strong></a> or <a href="#" class="link"><strong>password</strong></a>?</p>
+                        </div>
+                        <div class="pad-top-20 pad-btm-20">
+                            <input type="submit" class="btn btn-default btn-block btn-lg" value="Continue">
+                        </div>
+                        <div class="text-center">
+                            <p>Do you wish to register<br> for <a href="#" class="link user-actions"><strong>a new account</strong></a>?</p>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="dialog-back">
+            <div class="dialog-content">
+                <form id="register_form" class="dialog-form" action="" method="POST">
+                    <fieldset>
+                        <legend>Register</legend>
+                        <div class="form-group">
+                            <label for="user_username" class="control-label">Username:</label>
+                            <input type="text" id="user_username" class="form-control" name="user_username" />
+                        </div>
+                        <div class="form-group">
+                            <label for="user_password" class="control-label">Password:</label>
+                            <input type="password" id="user_password" class="form-control" name="user_password" />
+                        </div>
+                        <div class="form-group">
+                            <label for="user_cnf_password" class="control-label">Confirm password:</label>
+                            <input type="password" id="user_cnf_password" class="form-control" name="user_cnf_password" />
+                        </div>
+                        <div class="form-group pad-top-20 form-group-checkbox">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="user_terms" name="user_terms">
+                                    I have read and I agree with the Terms and Conditions
+                                </label>
+                            </div>
+                        </div>
+                        <div class="pad-btm-20">
+                            <input type="submit" class="btn btn-default btn-block btn-lg" value="Continue" />
+                        </div>
+                        <div class="text-center">
+                            <p>Return to <a href="#" class="link user-actions"><strong>log in page</strong></a>?</p>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="~/Scripts/Loginjs.js"></script>
+
+
+</body>
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4>Create a new account.</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.UserRole, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.RadioButtonFor(m => m.UserRole, "Doctor", new { @class = "radio-inline" }) @Html.Label("Doctor")
+            <br />
+            @Html.RadioButtonFor(m => m.UserRole, "Patient", new { @class = "radio-inline" })  @Html.Label("Patient")
+            <br />
+            @Html.RadioButtonFor(m => m.UserRole, "Admin", new { @class = "radio-inline" })  @Html.Label("Admin")
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Register" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

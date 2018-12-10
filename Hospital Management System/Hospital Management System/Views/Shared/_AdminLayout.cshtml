@@ -8,7 +8,6 @@
     <title>Admin | DashBoard</title>
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/Content/css/font-awesome.min.css" rel="stylesheet">
-    <link href="~/Content/css/datepicker3.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="~/Content/datatables/css/datatables.bootstrap.css">
     <link rel="stylesheet" href="~/Content/Chosen/chosen.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="~/Content/Layout/resources/img/logo.jpg" />
@@ -76,9 +75,18 @@
                 </div>
             </li>
             <li>
+                <button class="collapsible"><em class="fa fa-bullhorn">&nbsp; &nbsp;</em>Announcement</button>
+                <div style="width: 100% !important" class="children content">
+                    @Html.ActionLink("Add Announcement", "AddAnnouncement", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @Html.ActionLink("List of Announcement", "ListOfAnnouncement", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                </div>
+            </li>
+            <li>
                 <button class="collapsible"><em class="fa fa-pencil-square-o">&nbsp; &nbsp;</em>Appointment</button>
                 <div style="width: 100% !important" class="children content">
-                    @Html.ActionLink("Add Appointment", "Index", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @Html.ActionLink("Add Appointment", "AddAppointment", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @Html.ActionLink("Active Appointments", "ListOfAppointments", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                    @Html.ActionLink("Pending Appointments", "PendingAppointments", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
                 </div>
             </li>
             <li>
@@ -111,7 +119,6 @@
     <script src="~/Content/js/chart-data.js"></script>
     <script src="~/Content/js/easypiechart.js"></script>
     <script src="~/Content/js/easypiechart-data.js"></script>
-    <script src="~/Content/js/bootstrap-datepicker.js"></script>
     <script src="~/Content/js/custom.js"></script>
     <!--Script for collapse-->
     <script>
@@ -131,16 +138,19 @@
                 });
         }
     </script>
+
     <script>
-        window.onload = function () {
-            var chart1 = document.getElementById("line-chart").getContext("2d");
-            window.myLine = new Chart(chart1).Line(lineChartData, {
-                responsive: true,
-                scaleLineColor: "rgba(0,0,0,.2)",
-                scaleGridLineColor: "rgba(0,0,0,.05)",
-                scaleFontColor: "#c5c7cc"
+        $('.count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 1500,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
             });
-        };
+        });
     </script>
     
     @RenderSection("scripts", required: false)

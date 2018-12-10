@@ -18,7 +18,7 @@
                     <br>
                     <h3>Address:</h3>
                     <h3>Contact:</h3>
-                    <h3>Date: @(DateTime.Now.ToShortDateString())</h3>
+                    <h3>Date: @(Model.PrescriptionAddDate.ToShortDateString())</h3>
                 </div>
 
                 <div class="yui-u">
@@ -119,17 +119,17 @@
                                     <div class="job">
                                         <h2>Medicine: @Model.Medicine1</h2>
                                         <h4>
-                                            @if (@Model.Morning1 != null)
+                                            @if (@Model.Morning1)
                                             {
-                                                @(Model.Morning1 + " -")
+                                                @("Morning" + " -")
                                             }
-                                            @if (@Model.Afternoon1 != null)
+                                            @if (@Model.Afternoon1)
                                             {
-                                                @(Model.Afternoon1 + " -")
+                                                @("Afternoon" + " -")
                                             }
-                                            @if (@Model.Evening1 != null)
+                                            @if (@Model.Evening1)
                                             {
-                                                @Model.Evening1
+                                                @("Evening")
                                             }
                                         </h4>
                                         <br />
@@ -143,17 +143,17 @@
                                     <div class="job">
                                         <h2>Medicine: @Model.Medicine2</h2>
                                         <h4>
-                                            @if (@Model.Morning2 != null)
+                                            @if (@Model.Morning2)
                                             {
-                                                @(Model.Morning2 + " -")
+                                                @("Morning" + " -")
                                             }
-                                            @if (@Model.Afternoon2 != null)
+                                            @if (@Model.Afternoon2)
                                             {
-                                                @(Model.Afternoon2 + " -")
+                                                @("Afternoon" + " -")
                                             }
-                                            @if (@Model.Evening2 != null)
+                                            @if (@Model.Evening2)
                                             {
-                                                @Model.Evening2
+                                                @("Evening")
                                             }
                                         </h4>
                                         <br />
@@ -167,17 +167,17 @@
                                     <div class="job">
                                         <h2>Medicine: @Model.Medicine3</h2>
                                         <h4>
-                                            @if (@Model.Morning3 != null)
+                                            @if (@Model.Morning3)
                                             {
-                                                @(Model.Morning3 + " -")
+                                                @("Morning" + " -")
                                             }
-                                            @if (@Model.Afternoon3 != null)
+                                            @if (@Model.Afternoon3)
                                             {
-                                                @(Model.Afternoon3 + " -")
+                                                @("Afternoon" + " -")
                                             }
-                                            @if (@Model.Evening3 != null)
+                                            @if (@Model.Evening3)
                                             {
-                                                @Model.Evening3
+                                                @("Evening")
                                             }
                                         </h4>
                                         <br />
@@ -191,17 +191,17 @@
                                     <div class="job">
                                         <h2>Medicine: @Model.Medicine4</h2>
                                         <h4>
-                                            @if (@Model.Morning4 != null)
+                                            @if (@Model.Morning4)
                                             {
-                                                @(Model.Morning4 + " -")
+                                                @("Morning" + " -")
                                             }
-                                            @if (@Model.Afternoon4 != null)
+                                            @if (@Model.Afternoon4)
                                             {
-                                                @(Model.Afternoon4 + " -")
+                                                @("Afternoon" + " -")
                                             }
-                                            @if (@Model.Evening4 != null)
+                                            @if (@Model.Evening4)
                                             {
-                                                @Model.Evening4
+                                                @("Evening")
                                             }
                                         </h4>
                                         <br />
@@ -215,17 +215,17 @@
                                     <div class="job">
                                         <h2>Medicine: @Model.Medicine5</h2>
                                         <h4>
-                                            @if (@Model.Morning5 != null)
+                                            @if (@Model.Morning5)
                                             {
-                                                @(Model.Morning5 + " -")
+                                                @("Morning" + " -")
                                             }
-                                            @if (@Model.Afternoon5 != null)
+                                            @if (@Model.Afternoon5)
                                             {
-                                                @(Model.Afternoon5 + " -")
+                                                @("Afternoon" + " -")
                                             }
-                                            @if (@Model.Evening5 != null)
+                                            @if (@Model.Evening5)
                                             {
-                                                @Model.Evening5
+                                                @("Evening")
                                             }
                                         </h4>
                                         <br />
@@ -239,17 +239,17 @@
                                     <div class="job">
                                         <h2>Medicine: @Model.Medicine6</h2>
                                         <h4>
-                                            @if (@Model.Morning6 != null)
+                                            @if (@Model.Morning6)
                                             {
-                                                @(Model.Morning6 + " -")
+                                                @("Morning" + " -")
                                             }
-                                            @if (@Model.Afternoon6 != null)
+                                            @if (@Model.Afternoon6)
                                             {
-                                                @(Model.Afternoon6 + " -")
+                                                @("Afternoon" + " -")
                                             }
-                                            @if (@Model.Evening6 != null)
+                                            @if (@Model.Evening6)
                                             {
-                                                @Model.Evening6
+                                                @("Evening")
                                             }
                                         </h4>
                                         <br />
@@ -263,17 +263,17 @@
                                     <div class="job">
                                         <h2>Medicine: @Model.Medicine7</h2>
                                         <h4>
-                                            @if (@Model.Morning7 != null)
+                                            @if (@Model.Morning7)
                                             {
-                                                @(Model.Morning7 + " -")
+                                                @("Morning" + " -")
                                             }
-                                            @if (@Model.Afternoon7 != null)
+                                            @if (@Model.Afternoon7)
                                             {
-                                                @(Model.Afternoon7 + " -")
+                                                @("Afternoon" + " -")
                                             }
-                                            @if (@Model.Evening7 != null)
+                                            @if (@Model.Evening7)
                                             {
-                                                @Model.Evening7
+                                                @("Evening")
                                             }
                                         </h4>
                                         <br />

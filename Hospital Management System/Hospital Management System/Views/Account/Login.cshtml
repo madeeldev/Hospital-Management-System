@@ -19,13 +19,14 @@
             <div class="col span-2-of-4">
                 <div class="plan-box">
                     <div>
+                        @Html.ValidationSummary("", new { @class = "text-danger" })
                         <div>
-                            <label for="name">Name</label>
+                            <label for="name">Name<span style="color: red; font-weight: bold">*</span></label>
                             @Html.TextBoxFor(m => m.Email, new { @placeholder="Your Email", id="name" })
                             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                         </div>
                         <div>
-                            <label for="password">Password</label>
+                            <label for="password">Password<span style="color: red; font-weight: bold">*</span></label>
                             @Html.PasswordFor(m => m.Password, new { @placeholder = "Password", id = "password" })
                             @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                             
@@ -52,6 +53,9 @@
             <div class="col span-1-of-4">
            
             </div>
+        </div>
+        <div style="text-align: center" class="row">
+            @Html.ActionLink("Back to Home", "Index", "Home")
         </div>
     }
     

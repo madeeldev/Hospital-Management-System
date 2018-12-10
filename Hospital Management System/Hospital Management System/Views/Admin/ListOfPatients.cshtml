@@ -12,7 +12,7 @@
                 <em class="fa fa-home"></em>
             </a>
         </li>
-        <li class="active">Admin</li>
+        <li class="active">Patient</li>
         <li class="active">List of Patients</li>
     </ol>
 </div>
@@ -54,9 +54,8 @@
                     @Html.DisplayFor(modelItem => item.Gender)
                 </td>
                 <td>
-                    <a href="@Url.Action("EditDoctors", new {id = item.Id})" class="fa fa-pencil-square-o" style="font-size: 19px"></a> |
-                    <a href="@Url.Action("DoctorDetail", new {id = item.Id})" class="fa fa-info-circle" style="font-size: 19px; color: lightblue"></a> |
-                    <a href="@Url.Action("DeleteDoctor", new {id = item.ApplicationUserId})" class="fa fa-trash" style="font-size: 19px; color: red"></a>
+                    <a href="@Url.Action("EditPatient", new {id = item.Id})" class="fa fa-pencil-square-o" style="font-size: 19px"></a> |
+                    <a href="@Url.Action("DeletePatient", new {id = item.ApplicationUserId})" class="fa fa-trash" style="font-size: 19px; color: red"></a>
                 </td>
             </tr>
         }

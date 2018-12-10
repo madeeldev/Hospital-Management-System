@@ -17,7 +17,9 @@ namespace Hospital_Management_System.Controllers
     public class AdminController : Controller
     {
         private ApplicationDbContext db;
+
         private ApplicationUserManager _userManager;
+
         //Constructor
         public AdminController()
         {
@@ -32,24 +34,27 @@ namespace Hospital_Management_System.Controllers
 
         public ApplicationUserManager UserManager
         {
-            get
-            {
-                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            }
-            private set
-            {
-                _userManager = value;
-            }
+            get { return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>(); }
+            private set { _userManager = value; }
         }
 
         // GET: Admin
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
+            var date = DateTime.Now.Date;
             var model = new CollectionOfAll
             {
                 Ambulances = db.Ambulances.ToList(),
-                Departments = db.Department.ToList()
+                Departments = db.Department.ToList(),
+                Doctors = db.Doctors.ToList(),
+                Patients = db.Patients.ToList(),
+                Medicines = db.Medicines.ToList(),
+                ActiveAppointments =
+                    db.Appointments.Where(c => c.Status).Where(c => c.AppointmentDate >= date).ToList(),
+                PendingAppointments = db.Appointments.Where(c => c.Status == false)
+                    .Where(c => c.AppointmentDate >= date).ToList(),
+                AmbulanceDrivers = db.AmbulanceDrivers.ToList()
             };
             return View(model);
         }
@@ -57,7 +62,7 @@ namespace Hospital_Management_System.Controllers
         //Department Section
 
         //Department List
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult DepartmentList()
         {
             var model = db.Department.ToList();
@@ -65,7 +70,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Add Department
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult AddDepartment()
         {
             return View();
@@ -80,13 +85,14 @@ namespace Hospital_Management_System.Controllers
                 ModelState.AddModelError("Name", "Name already present!");
                 return View(model);
             }
+
             db.Department.Add(model);
             db.SaveChanges();
             return RedirectToAction("DepartmentList");
         }
 
         //Edit Department
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult EditDepartment(int id)
         {
             var model = db.Department.SingleOrDefault(c => c.Id == id);
@@ -105,7 +111,7 @@ namespace Hospital_Management_System.Controllers
             return RedirectToAction("DepartmentList");
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteDepartment(int? id)
         {
             var department = db.Department.Single(c => c.Id == id);
@@ -128,7 +134,7 @@ namespace Hospital_Management_System.Controllers
         //Ambulance Driver Section
 
         //Add Ambulance Driver
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult AddAmbulanceDriver()
         {
             return View();
@@ -144,7 +150,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Edit Ambulance Driver
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult EditAmbulanceDriver(int id)
         {
             var viewmodel = db.AmbulanceDrivers.SingleOrDefault(c => c.Id == id);
@@ -168,8 +174,9 @@ namespace Hospital_Management_System.Controllers
             db.SaveChanges();
             return RedirectToAction("ListOfAmbulanceDrivers");
         }
+
         //List of Ambulance Drivers
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult ListOfAmbulanceDrivers()
         {
             var model = db.AmbulanceDrivers.ToList();
@@ -178,7 +185,7 @@ namespace Hospital_Management_System.Controllers
 
         //Ambulance Section
         //Add Ambulance
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult AddAmbulance()
         {
             var model = new AmbulanceCollection
@@ -209,7 +216,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Edit Ambulance
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult EditAmbulance(int id)
         {
             var viewmodel = new AmbulanceCollection
@@ -217,7 +224,7 @@ namespace Hospital_Management_System.Controllers
                 Ambulance = db.Ambulances.Single(c => c.Id == id),
                 AmbulanceDrivers = db.AmbulanceDrivers.ToList()
             };
-        return View(viewmodel);
+            return View(viewmodel);
         }
 
         [HttpPost]
@@ -247,7 +254,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //List of Ambulances
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult ListOfAmbulances()
         {
             var model = db.Ambulances.Include(c => c.AmbulanceDriver).ToList();
@@ -255,7 +262,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Delete Ambulance
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteAmbulance(int? id)
         {
             var ambulance = db.Ambulances.Single(c => c.Id == id);
@@ -279,7 +286,7 @@ namespace Hospital_Management_System.Controllers
         //Start Medicine Section
 
         //Add Medicine
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult AddMedicine()
         {
             return View();
@@ -300,7 +307,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //List of Medicines
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult ListOfMedicine()
         {
             var medicine = db.Medicines.ToList();
@@ -308,7 +315,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Edit Medicine
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult EditMedicine(int id)
         {
             var medicine = db.Medicines.Single(c => c.Id == id);
@@ -335,7 +342,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Delete Medicine
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteMedicine(int? id)
         {
             return View();
@@ -356,7 +363,7 @@ namespace Hospital_Management_System.Controllers
         //Start Doctor Section
 
         //Add Doctor 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult AddDoctor()
         {
             var collection = new DoctorCollection
@@ -411,7 +418,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //List Of Doctors
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult ListOfDoctors()
         {
             var doctor = db.Doctors.Include(c => c.Department).ToList();
@@ -419,7 +426,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Detail of Doctor
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult DoctorDetail(int id)
         {
             var doctor = db.Doctors.Include(c => c.Department).SingleOrDefault(c => c.Id == id);
@@ -427,7 +434,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Edit Doctors
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult EditDoctors(int id)
         {
             var collection = new DoctorCollection
@@ -461,7 +468,8 @@ namespace Hospital_Management_System.Controllers
             return RedirectToAction("ListOfDoctors");
         }
 
-        //Delete Doctor pending
+        //Delete Doctor
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteDoctor(string id)
         {
             var UserId = db.Doctors.Single(c => c.ApplicationUserId == id);
@@ -479,6 +487,7 @@ namespace Hospital_Management_System.Controllers
                 var schedule = db.Schedules.Single(c => c.DoctorId == doctor.Id);
                 db.Schedules.Remove(schedule);
             }
+
             db.Users.Remove(user);
             db.Doctors.Remove(doctor);
             db.SaveChanges();
@@ -489,7 +498,7 @@ namespace Hospital_Management_System.Controllers
 
         //Start Schedule Section
         //Add Schedule
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult AddSchedule()
         {
             var collection = new ScheduleCollection
@@ -520,7 +529,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //List Of Schedules
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult ListOfSchedules()
         {
             var schedule = db.Schedules.Include(c => c.Doctor).ToList();
@@ -528,7 +537,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Edit Schedule
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult EditSchedule(int id)
         {
             var collection = new ScheduleCollection
@@ -561,7 +570,7 @@ namespace Hospital_Management_System.Controllers
         }
 
         //Delete Schedule
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteSchedule(int? id)
         {
             return View();
@@ -579,12 +588,274 @@ namespace Hospital_Management_System.Controllers
         //End Schedule Section
 
         //Start Patient Section
-        [Authorize]
+
+        //List of Patients
+        [Authorize(Roles = "Admin")]
         public ActionResult ListOfPatients()
         {
             var patients = db.Patients.ToList();
             return View(patients);
         }
-       
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult EditPatient(int id)
+        {
+            var patient = db.Patients.Single(c => c.Id == id);
+            return View(patient);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditPatient(int id, Patient model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var patient = db.Patients.Single(c => c.Id == id);
+            patient.FirstName = model.FirstName;
+            patient.LastName = model.LastName;
+            patient.FullName = model.FirstName + " " + model.LastName;
+            patient.Address = model.Address;
+            patient.BloodGroup = model.BloodGroup;
+            patient.Contact = model.Contact;
+            patient.DateOfBirth = model.DateOfBirth;
+            patient.EmailAddress = model.EmailAddress;
+            patient.Gender = model.Gender;
+            patient.PhoneNo = model.PhoneNo;
+            db.SaveChanges();
+            return RedirectToAction("ListOfPatients");
+        }
+
+        //Delete Patient
+        [Authorize(Roles = "Admin")]
+        public ActionResult DeletePatient()
+        {
+            return View();
+        }
+
+        [HttpPost, ActionName("DeletePatient")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePatient(string id)
+        {
+            var patient = db.Patients.Single(c => c.ApplicationUserId == id);
+            var user = db.Users.Single(c => c.Id == id);
+            db.Users.Remove(user);
+            db.Patients.Remove(patient);
+            db.SaveChanges();
+            return RedirectToAction("ListOfPatients");
+        }
+
+        //End Patient Section
+
+        //Start Appointment Section
+
+        //Add Appointment
+        [Authorize(Roles = "Admin")]
+        public ActionResult AddAppointment()
+        {
+            var collection = new AppointmentCollection
+            {
+                Appointment = new Appointment(),
+                Patients = db.Patients.ToList(),
+                Doctors = db.Doctors.ToList()
+            };
+            return View(collection);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddAppointment(AppointmentCollection model)
+        {
+            var appointment = new Appointment();
+            appointment.PatientId = model.Appointment.PatientId;
+            appointment.DoctorId = model.Appointment.DoctorId;
+            appointment.AppointmentDate = model.Appointment.AppointmentDate;
+            appointment.Problem = model.Appointment.Problem;
+            appointment.Status = model.Appointment.Status;
+
+            db.Appointments.Add(appointment);
+            db.SaveChanges();
+
+            if (model.Appointment.Status == true)
+            {
+                return RedirectToAction("ListOfAppointments");
+            }
+            else
+            {
+                return RedirectToAction("PendingAppointments");
+            }
+        }
+
+        //List of Active Appointment
+        [Authorize(Roles = "Admin")]
+        public ActionResult ListOfAppointments()
+        {
+            var date = DateTime.Now.Date;
+            var appointment = db.Appointments.Include(c => c.Doctor).Include(c => c.Patient)
+                .Where(c => c.Status == true).Where(c => c.AppointmentDate >= date).ToList();
+            return View(appointment);
+        }
+
+        //List of pending Appointments
+        [Authorize(Roles = "Admin")]
+        public ActionResult PendingAppointments()
+        {
+            var date = DateTime.Now.Date;
+            var appointment = db.Appointments.Include(c => c.Doctor).Include(c => c.Patient)
+                .Where(c => c.Status == false).Where(c => c.AppointmentDate >= date).ToList();
+            return View(appointment);
+        }
+
+        //Edit Appointment
+        [Authorize(Roles = "Admin")]
+        public ActionResult EditAppointment(int id)
+        {
+            var collection = new AppointmentCollection
+            {
+                Appointment = db.Appointments.Single(c => c.Id == id),
+                Patients = db.Patients.ToList(),
+                Doctors = db.Doctors.ToList()
+            };
+            return View(collection);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditAppointment(int id, AppointmentCollection model)
+        {
+            var appointment = db.Appointments.Single(c => c.Id == id);
+            appointment.PatientId = model.Appointment.PatientId;
+            appointment.DoctorId = model.Appointment.DoctorId;
+            appointment.AppointmentDate = model.Appointment.AppointmentDate;
+            appointment.Problem = model.Appointment.Problem;
+            appointment.Status = model.Appointment.Status;
+            db.SaveChanges();
+            if (model.Appointment.Status == true)
+            {
+                return RedirectToAction("ListOfAppointments");
+            }
+            else
+            {
+                return RedirectToAction("PendingAppointments");
+            }
+        }
+
+        //Detail of Appointment
+        [Authorize(Roles = "Admin")]
+        public ActionResult DetailOfAppointment(int id)
+        {
+            var appointment = db.Appointments.Include(c => c.Doctor).Include(c => c.Patient).Single(c => c.Id == id);
+            return View(appointment);
+        }
+
+        //Delete Appointment
+        [Authorize(Roles = "Admin")]
+        public ActionResult DeleteAppointment(int? id)
+        {
+            var appointment = db.Appointments.Single(c => c.Id == id);
+            return View(appointment);
+        }
+
+        [HttpPost, ActionName("DeleteAppointment")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteAppointment(int id)
+        {
+            var appointment = db.Appointments.Single(c => c.Id == id);
+            db.Appointments.Remove(appointment);
+            db.SaveChanges();
+            if (appointment.Status)
+            {
+                return RedirectToAction("ListOfAppointments");
+            }
+            else
+            {
+                return RedirectToAction("PendingAppointments");
+            }
+        }
+
+        //End Appointment Section
+
+        //Start Announcement Section
+
+        //Add Announcement
+        [Authorize(Roles = "Admin")]
+        public ActionResult AddAnnouncement()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddAnnouncement(Announcement model)
+        {
+            if (model.End >= DateTime.Now.Date)
+            {
+                db.Announcements.Add(model);
+                db.SaveChanges();
+                return RedirectToAction("ListOfAnnouncement");
+            }
+            else
+            {
+                ViewBag.Messege = "Please Enter the Date greater than today!!";
+            }
+
+            return View(model);
+        }
+
+        //List of Announcement
+        [Authorize(Roles = "Admin")]
+        public ActionResult ListOfAnnouncement()
+        {
+            var list = db.Announcements.ToList();
+            return View(list);
+        }
+
+        //Edit Announcement
+        [Authorize(Roles = "Admin")]
+        public ActionResult EditAnnouncement(int id)
+        {
+            var announcement = db.Announcements.Single(c => c.Id == id);
+            return View(announcement);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditAnnouncement(int id, Announcement model)
+        {
+            var announcement = db.Announcements.Single(c => c.Id == id);
+            if (model.End >= DateTime.Now.Date)
+            {
+                announcement.Announcements = model.Announcements;
+                announcement.End = model.End;
+                announcement.AnnouncementFor = model.AnnouncementFor;
+                db.SaveChanges();
+                return RedirectToAction("ListOfAnnouncement");
+            }
+            else
+            {
+                ViewBag.Messege = "Please Enter the Date greater than today!!";
+            }
+
+            return View(announcement);
+        }
+
+        //Delete Announcement
+        [Authorize(Roles = "Admin")]
+        public ActionResult DeleteAnnouncement(int? id)
+        {
+            return View();
+        }
+
+        [HttpPost, ActionName("DeleteAnnouncement")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteAnnouncement(int id)
+        {
+            var announcement = db.Announcements.Single(c => c.Id == id);
+            db.Announcements.Remove(announcement);
+            db.SaveChanges();
+            return RedirectToAction("ListOfAnnouncement");
+        }
     }
 }

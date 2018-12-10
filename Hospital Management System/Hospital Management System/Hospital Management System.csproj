@@ -168,8 +168,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="CollectionViewModels\AmbulanceCollection.cs" />
+    <Compile Include="CollectionViewModels\AppointmentCollection.cs" />
     <Compile Include="CollectionViewModels\CollectionOfAll.cs" />
     <Compile Include="CollectionViewModels\DoctorCollection.cs" />
+    <Compile Include="CollectionViewModels\DoctorIndexCollection.cs" />
     <Compile Include="CollectionViewModels\PrescriptionCollection.cs" />
     <Compile Include="CollectionViewModels\ScheduleCollection.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -317,10 +319,33 @@
     <Compile Include="Migrations\201811300800433_AddReviewsInDB.Designer.cs">
       <DependentUpon>201811300800433_AddReviewsInDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812010814137_ChangeInPrescriptionDB.cs" />
+    <Compile Include="Migrations\201812010814137_ChangeInPrescriptionDB.Designer.cs">
+      <DependentUpon>201812010814137_ChangeInPrescriptionDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812010829163_AddPrescriptionDateinPrescriptionDB.cs" />
+    <Compile Include="Migrations\201812010829163_AddPrescriptionDateinPrescriptionDB.Designer.cs">
+      <DependentUpon>201812010829163_AddPrescriptionDateinPrescriptionDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812010958526_AddAppointmentInDB.cs" />
+    <Compile Include="Migrations\201812010958526_AddAppointmentInDB.Designer.cs">
+      <DependentUpon>201812010958526_AddAppointmentInDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812011039365_MakeNullableDateInAppointmentDB.cs" />
+    <Compile Include="Migrations\201812011039365_MakeNullableDateInAppointmentDB.Designer.cs">
+      <DependentUpon>201812011039365_MakeNullableDateInAppointmentDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812091257446_AddAnnouncementInDB.cs" />
+    <Compile Include="Migrations\201812091257446_AddAnnouncementInDB.Designer.cs">
+      <DependentUpon>201812091257446_AddAnnouncementInDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ambulance.cs" />
     <Compile Include="Models\AmbulanceDriver.cs" />
+    <Compile Include="Models\Announcement.cs" />
+    <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\DeleteAnnouncementOnExpire.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DepartmentStatus.cs" />
     <Compile Include="Models\Doctor.cs" />
@@ -525,6 +550,7 @@
     <Content Include="Content\Layout\vendors\fonts\ionicons.ttf" />
     <Content Include="Content\Layout\vendors\fonts\ionicons.woff" />
     <Content Include="Content\Layout\vendors\fonts\ionicons.woff2" />
+    <None Include="Properties\PublishProfiles\Usman.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chosen.jquery.min.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
@@ -603,7 +629,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -673,6 +701,30 @@
     <Content Include="Views\Admin\ListOfPatients.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Doctor\DeletePrescription.cshtml" />
+    <Content Include="Views\Admin\EditPatient.cshtml" />
+    <Content Include="Views\Admin\DeletePatient.cshtml" />
+    <Content Include="Views\Doctor\EditPrescription.cshtml" />
+    <Content Include="Views\Admin\AddAppointment.cshtml" />
+    <Content Include="Views\Admin\ListOfAppointments.cshtml" />
+    <Content Include="Views\Admin\EditAppointment.cshtml" />
+    <Content Include="Views\Admin\PendingAppointments.cshtml" />
+    <Content Include="Views\Admin\DetailOfAppointment.cshtml" />
+    <Content Include="Views\Admin\DeleteAppointment.cshtml" />
+    <Content Include="Views\Patient\AddAppointment.cshtml" />
+    <Content Include="Views\Patient\ListOfAppointments.cshtml" />
+    <Content Include="Views\Doctor\ScheduleDetail.cshtml" />
+    <Content Include="Views\Doctor\EditSchedule.cshtml" />
+    <Content Include="Views\Doctor\AddAppointment.cshtml" />
+    <Content Include="Views\Doctor\ActiveAppointments.cshtml" />
+    <Content Include="Views\Doctor\PendingAppointments.cshtml" />
+    <Content Include="Views\Doctor\EditAppointment.cshtml" />
+    <Content Include="Views\Doctor\DetailOfAppointment.cshtml" />
+    <Content Include="Views\Doctor\DeleteAppointment.cshtml" />
+    <Content Include="Views\Patient\DeleteAppointment.cshtml" />
+    <Content Include="Views\Admin\AddAnnouncement.cshtml" />
+    <Content Include="Views\Admin\ListOfAnnouncement.cshtml" />
+    <Content Include="Views\Admin\EditAnnouncement.cshtml" />
+    <Content Include="Views\Admin\DeleteAnnouncement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -788,6 +840,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811300800433_AddReviewsInDB.resx">
       <DependentUpon>201811300800433_AddReviewsInDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812010814137_ChangeInPrescriptionDB.resx">
+      <DependentUpon>201812010814137_ChangeInPrescriptionDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812010829163_AddPrescriptionDateinPrescriptionDB.resx">
+      <DependentUpon>201812010829163_AddPrescriptionDateinPrescriptionDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812010958526_AddAppointmentInDB.resx">
+      <DependentUpon>201812010958526_AddAppointmentInDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812011039365_MakeNullableDateInAppointmentDB.resx">
+      <DependentUpon>201812011039365_MakeNullableDateInAppointmentDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812091257446_AddAnnouncementInDB.resx">
+      <DependentUpon>201812091257446_AddAnnouncementInDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

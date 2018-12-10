@@ -29,6 +29,13 @@ body {
     visibility: hidden;
 }
 
+/*Required*/
+.required 
+{
+    font-weight: bold;
+    color: red; 
+}
+
 /*---------------------------------*/
 /*Header*/
 /*---------------------------------*/

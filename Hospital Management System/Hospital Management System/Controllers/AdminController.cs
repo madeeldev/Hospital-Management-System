@@ -410,7 +410,7 @@ namespace Hospital_Management_System.Controllers
                 };
                 db.Doctors.Add(doctor);
                 db.SaveChanges();
-                return RedirectToAction("ListOfDoctors");
+                return RedirectToAction("AddSchedule");
             }
 
             return HttpNotFound();

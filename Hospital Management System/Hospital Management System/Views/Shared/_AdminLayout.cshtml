@@ -90,6 +90,12 @@
                 </div>
             </li>
             <li>
+                <button class="collapsible"><em class="fa fa-telegram">&nbsp; &nbsp;</em>Complaint</button>
+                <div style="width: 100% !important" class="children content">
+                    @Html.ActionLink("List of Complains", "ListOfComplains", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
+                </div>
+            </li>
+            <li>
                 <button class="collapsible"><em class="fa fa-medkit">&nbsp; &nbsp;</em>Medicine</button>
                 <div style="width: 100% !important" class="children content">
                     @Html.ActionLink("Add Medicine", "AddMedicine", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })

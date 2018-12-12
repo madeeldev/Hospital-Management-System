@@ -1,6 +1,5 @@
 ﻿@using System.Web.UI.WebControls
 @using Hospital_Management_System.Models
-@model Hospital_Management_System.Models.Reviews
 @{
     ViewBag.Title = "Home Page";
 }
@@ -142,66 +141,6 @@
             <blockquote>I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!</blockquote>
             <cite><img src="~/Content/Layout/resources/img/customer-3.jpg" alt="first-customer">Milton Chapman</cite>
         </div>
-    </div>
-</section>
-<section class="section-form" id="contact">
-    <div class="row">
-        <h2>We're happy to hear from you</h2>
-    </div>
-    <div class="row">
-        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new {@class= "contact-form" }))
-        {
-            <div class="row">
-                <div class="col span-1-of-3">
-                    <label for="name">Name</label>
-                </div>
-                <div class="col span-2-of-3">
-                    @Html.TextBoxFor(model => model.Name, null, new { @placeholder = "Your Name" })
-                </div>
-            </div>
-            <div class="row">
-                <div class="col span-1-of-3">
-                    <label for="email">Email</label>
-                </div>
-                <div class="col span-2-of-3">
-                    @Html.TextBoxFor(model => model.Email, null, new { @PlaceHolder = "Your Email", @id = "email" })
-                </div>
-            </div>
-            var list = new List<Reviews>
-            {
-                new Reviews {FindUs = "Friends"},
-                new Reviews {FindUs = "Search Engine"},
-                new Reviews {FindUs = "Advertisement"},
-                new Reviews {FindUs = "Other"}
-            };
-                <div class="row">
-                    <div class="col span-1-of-3">
-                        <label for="find-us">How did you find us?</label>
-                    </div>
-                    <div class="col span-2-of-3">
-                        @Html.DropDownListFor(model => model.FindUs, new SelectList(list, "FindUs", "FindUS"), new { @id = "find-us" })
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col span-1-of-3">
-                        <label>Drop us a line</label>
-                    </div>
-                    <div class="col span-2-of-3">
-                        @Html.TextAreaFor(model => model.Message, new { @PlaceHolder = "Your Message" })
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col span-1-of-3">
-                        <label>&nbsp;</label>
-                    </div>
-                    <div class="col span-2-of-3">
-                        <input type="submit" value="Send it!">
-                    </div>
-                </div>
-                }
-        <form method="post" action="#" class="contact-form">
-            
-        </form>
     </div>
 </section>
 

@@ -146,7 +146,7 @@ namespace Hospital_Management_System.Controllers
         {
             db.AmbulanceDrivers.Add(model);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("ListOfAmbulanceDrivers");
         }
 
         //Edit Ambulance Driver
@@ -406,11 +406,12 @@ namespace Hospital_Management_System.Controllers
                     BloodGroup = model.Doctor.BloodGroup,
                     ApplicationUserId = user.Id,
                     DateOfBirth = model.Doctor.DateOfBirth,
-                    Address = model.Doctor.Address
+                    Address = model.Doctor.Address,
+                    Status = model.Doctor.Status
                 };
                 db.Doctors.Add(doctor);
                 db.SaveChanges();
-                return RedirectToAction("AddSchedule");
+                return RedirectToAction("ListOfDoctors");
             }
 
             return HttpNotFound();
@@ -463,6 +464,7 @@ namespace Hospital_Management_System.Controllers
             doctor.BloodGroup = model.Doctor.BloodGroup;
             doctor.DateOfBirth = model.Doctor.DateOfBirth;
             doctor.Address = model.Doctor.Address;
+            doctor.Status = model.Doctor.Status;
             db.SaveChanges();
 
             return RedirectToAction("ListOfDoctors");
@@ -856,6 +858,52 @@ namespace Hospital_Management_System.Controllers
             db.Announcements.Remove(announcement);
             db.SaveChanges();
             return RedirectToAction("ListOfAnnouncement");
+        }
+
+        //Start Complaint Section
+
+        //List of Complaints
+        [Authorize(Roles = "Admin")]
+        public ActionResult ListOfComplains()
+        {
+            var complain = db.Complaints.ToList();
+            return View(complain);
+        }
+
+        //Edit Complaint
+        [Authorize(Roles = "Admin")]
+        public ActionResult EditComplain(int id)
+        {
+            var complain = db.Complaints.Single(c => c.Id == id);
+            return View(complain);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditComplain(int id, Complaint model)
+        {
+            var complain = db.Complaints.Single(c => c.Id == id);
+            complain.Complain = model.Complain;
+            complain.Reply = model.Reply;
+            db.SaveChanges();
+            return RedirectToAction("ListOfComplains");
+        }
+
+        //Delete Complaint
+        [Authorize(Roles = "Admin")]
+        public ActionResult DeleteComplain()
+        {
+            return View();
+        }
+
+        [HttpPost, ActionName("DeleteComplain")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteComplain(int id)
+        {
+            var complain = db.Complaints.Single(c => c.Id == id);
+            db.Complaints.Remove(complain);
+            db.SaveChanges();
+            return RedirectToAction("ListOfComplains");
         }
     }
 }

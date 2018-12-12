@@ -60,5 +60,8 @@ namespace Hospital_Management_System.Models
         [Display(Name = "Education/Degree")]
         public string Education { get; set; }
 
+        [Required]
+        public string Status { get; set; }
+
     }
 }

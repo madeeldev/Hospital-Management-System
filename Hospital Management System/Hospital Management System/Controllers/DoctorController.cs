@@ -131,7 +131,7 @@ namespace Hospital_Management_System.Controllers
         [Authorize(Roles = "Doctor")]
         public ActionResult ViewPrescription(int id)
         {
-            var prescription = db.Prescription.Single(c => c.PatientId == id);
+            var prescription = db.Prescription.Single(c => c.Id == id);
             return View(prescription);
         }
 
@@ -156,7 +156,7 @@ namespace Hospital_Management_System.Controllers
         [Authorize(Roles = "Doctor")]
         public ActionResult EditPrescription(int id)
         {
-            var prescription = db.Prescription.Single(c => c.PatientId == id);
+            var prescription = db.Prescription.Single(c => c.Id == id);
             return View(prescription);
         }
 
@@ -164,7 +164,7 @@ namespace Hospital_Management_System.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EditPrescription(int id, Prescription model)
         {
-            var prescription = db.Prescription.Single(c => c.PatientId == id);
+            var prescription = db.Prescription.Single(c => c.Id == id);
             prescription.MedicalTest1 = model.MedicalTest1;
             prescription.MedicalTest2 = model.MedicalTest2;
             prescription.MedicalTest3 = model.MedicalTest3;
@@ -275,7 +275,7 @@ namespace Hospital_Management_System.Controllers
             }
             else
             {
-                return RedirectToAction("");
+                return RedirectToAction("PendingAppointments");
             }
         }
 

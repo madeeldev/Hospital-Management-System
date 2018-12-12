@@ -40,6 +40,9 @@
             @Html.DisplayNameFor(model => model.Problem)
         </th>
         <th>
+            Appointment Id
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Status)
         </th>
         <th>Action</th>
@@ -58,11 +61,23 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Problem)
             </td>
+            @if (item.Status)
+            {
+                <td>
+                    @Html.DisplayFor(m => item.Id)
+                </td>
+            }
+            else
+            {
+                <td>
+                    @("Not Approved")
+                </td>
+            }
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
-                <a href="@Url.Action("DeleteAppointment", new {id = item.Id})" class="fa fa-trash" style="font-size: 19px; color: red"></a>
+                <a id="dlt-link" href="@Url.Action("DeleteAppointment", new {id = item.Id})" class="fa fa-trash" style="font-size: 19px; color: red"></a>
             </td>
         </tr>
     }
@@ -72,7 +87,7 @@
 
 @section scripts {
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $("#table_id").dataTable();
         });
     </script>

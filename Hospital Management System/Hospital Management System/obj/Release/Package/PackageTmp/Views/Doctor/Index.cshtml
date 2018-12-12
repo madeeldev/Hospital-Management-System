@@ -1,4 +1,4 @@
-﻿
+﻿@model Hospital_Management_System.CollectionViewModels.CollectionOfAll
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_DoctorLayout.cshtml";
@@ -27,7 +27,7 @@
             <div class="panel panel-teal panel-widget border-right">
                 <div class="row no-padding">
                     <em class="fa fa-xl fa-building color-blue"></em>
-                    <div class="large">20</div>
+                    <div class="large count">@Model.Departments.Count()</div>
                     <div class="text-muted">Departments</div>
                 </div>
             </div>
@@ -35,88 +35,98 @@
         <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
             <div class="panel panel-blue panel-widget border-right">
                 <div class="row no-padding">
-                    <em class="fa fa-xl fa-comments color-orange"></em>
-                    <div class="large">52</div>
-                    <div class="text-muted">Comments</div>
+                    <em class="fa fa-xl fa-user-md color-orange"></em>
+                    <div class="large count">@Model.Doctors.Count()</div>
+                    <div class="text-muted">Doctors</div>
                 </div>
             </div>
         </div>
         <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
             <div class="panel panel-orange panel-widget border-right">
                 <div class="row no-padding">
-                    <em class="fa fa-xl fa-users color-teal"></em>
-                    <div class="large">24</div>
-                    <div class="text-muted">New Users</div>
+                    <em class="fa fa-xl fa-user color-teal"></em>
+                    <div class="large">@Model.Patients.Count()</div>
+                    <div class="text-muted">Patients</div>
                 </div>
             </div>
         </div>
         <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
             <div class="panel panel-red panel-widget ">
                 <div class="row no-padding">
-                    <em class="fa fa-xl fa-search color-red"></em>
-                    <div class="large">25.2k</div>
-                    <div class="text-muted">Page Views</div>
+                    <em class="fa fa-xl fa-ambulance color-red"></em>
+                    <div class="large count">@Model.Ambulances.Count()</div>
+                    <div class="text-muted">Ambulances</div>
                 </div>
             </div>
         </div>
     </div><!--/.row-->
+    <div class="row">
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-teal panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="fa fa-xl fa-pencil-square color-red"></em>
+                    <div class="large count">@Model.ActiveAppointments.Count()</div>
+                    <div class="text-muted">Active Appointments</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-blue panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="fa fa-xl fa-pencil-square color-teal"></em>
+                    <div class="large count">@Model.PendingAppointments.Count()</div>
+                    <div class="text-muted">pending Appointments</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-blue panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="fa fa-xl fa-medkit color-orange"></em>
+                    <div class="large count">@Model.Medicines.Count()</div>
+                    <div class="text-muted">Medicines</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-blue panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="fa fa-xl fa-car color-blue"></em>
+                    <div class="large count">@Model.AmbulanceDrivers.Count()</div>
+                    <div class="text-muted">Ambulance Drivers</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div class="row">
-    <div class="col-xs-6 col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-body easypiechart-panel">
-                <h4>New Orders</h4>
-                <div class="easypiechart" id="easypiechart-blue" data-percent="92"><span class="percent">92%</span></div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xs-6 col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-body easypiechart-panel">
-                <h4>Comments</h4>
-                <div class="easypiechart" id="easypiechart-orange" data-percent="65"><span class="percent">65%</span></div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xs-6 col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-body easypiechart-panel">
-                <h4>New Users</h4>
-                <div class="easypiechart" id="easypiechart-teal" data-percent="56"><span class="percent">56%</span></div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xs-6 col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-body easypiechart-panel">
-                <h4>Visitors</h4>
-                <div class="easypiechart" id="easypiechart-red" data-percent="27"><span class="percent">27%</span></div>
-            </div>
-        </div>
-    </div>
-</div><!--/.row-->
 
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default ">
             <div class="panel-heading">
-                Timeline
+                Announcement
                 <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
             </div>
             <div class="panel-body timeline-container">
                 <ul class="timeline">
-                    <li>
-                        <div class="timeline-badge"><em class="glyphicon glyphicon-pushpin"></em></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="timeline-title">Lorem ipsum dolor sit amet</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</p>
-                            </div>
-                        </div>
-                    </li>
+                    @foreach (var list in Model.Announcements)
+                    {
+                        if (list.AnnouncementFor == "Doctor")
+                        {
+                            <li>
+                                <div class="timeline-badge"><em class="glyphicon glyphicon-pushpin"></em></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">@list.Announcements</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    }
+                    
                 </ul>
             </div>
         </div>

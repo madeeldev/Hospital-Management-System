@@ -40,6 +40,9 @@
             @Html.DisplayNameFor(model => model.Problem)
         </th>
         <th>
+            Appointment Id
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Status)
         </th>
         <th>Action</th>
@@ -58,6 +61,18 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Problem)
             </td>
+            @if (item.Status)
+            {
+                <td>
+                    @Html.DisplayFor(m => item.Id)
+                </td>
+            }
+            else
+            {
+                <td>
+                    @("Not Approved")
+                </td>
+            }
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
             </td>

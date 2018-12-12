@@ -44,6 +44,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Education)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
             <th>Action</th>
         </tr>
     </thead>
@@ -53,7 +56,7 @@
             <tr>
                 
                 <td>
-                    @(Html.DisplayFor(modelItem => item.FirstName) + " " + Html.DisplayFor(modelItem => item.LastName))
+                    @Html.DisplayFor(modelItem => item.FullName)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Department.Name)
@@ -69,6 +72,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Education)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
                 </td>
                 <td>
                     <a href="@Url.Action("EditDoctors", new {id = item.Id})" class="fa fa-pencil-square-o" style="font-size: 19px"></a> |

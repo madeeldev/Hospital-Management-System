@@ -16,7 +16,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
             @if (Model.Status)
             {
                 @Html.ActionLink("Back to List", "ListOfAppointments")

@@ -339,12 +339,29 @@
     <Compile Include="Migrations\201812091257446_AddAnnouncementInDB.Designer.cs">
       <DependentUpon>201812091257446_AddAnnouncementInDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812101150218_AddStatusInDoctorDb.cs" />
+    <Compile Include="Migrations\201812101150218_AddStatusInDoctorDb.Designer.cs">
+      <DependentUpon>201812101150218_AddStatusInDoctorDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812111616517_AddComplaintInDB.cs" />
+    <Compile Include="Migrations\201812111616517_AddComplaintInDB.Designer.cs">
+      <DependentUpon>201812111616517_AddComplaintInDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812111731557_AddReplyInComplaintDB.cs" />
+    <Compile Include="Migrations\201812111731557_AddReplyInComplaintDB.Designer.cs">
+      <DependentUpon>201812111731557_AddReplyInComplaintDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812111825200_DropRiviewFromDb.cs" />
+    <Compile Include="Migrations\201812111825200_DropRiviewFromDb.Designer.cs">
+      <DependentUpon>201812111825200_DropRiviewFromDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Ambulance.cs" />
     <Compile Include="Models\AmbulanceDriver.cs" />
     <Compile Include="Models\Announcement.cs" />
     <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\Complaint.cs" />
     <Compile Include="Models\DeleteAnnouncementOnExpire.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DepartmentStatus.cs" />
@@ -354,7 +371,6 @@
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\Prescription.cs" />
-    <Compile Include="Models\Reviews.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -550,6 +566,9 @@
     <Content Include="Content\Layout\vendors\fonts\ionicons.ttf" />
     <Content Include="Content\Layout\vendors\fonts\ionicons.woff" />
     <Content Include="Content\Layout\vendors\fonts\ionicons.woff2" />
+    <Content Include="ClassDiagram1.cd" />
+    <Content Include="ClassDiagram2.cd" />
+    <Content Include="ClassDiagram3.cd" />
     <None Include="Properties\PublishProfiles\Usman.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chosen.jquery.min.js" />
@@ -725,6 +744,16 @@
     <Content Include="Views\Admin\ListOfAnnouncement.cshtml" />
     <Content Include="Views\Admin\EditAnnouncement.cshtml" />
     <Content Include="Views\Admin\DeleteAnnouncement.cshtml" />
+    <Content Include="Views\Patient\AvailableDoctors.cshtml" />
+    <Content Include="Views\Patient\DoctorSchedule.cshtml" />
+    <Content Include="Views\Patient\DoctorDetail.cshtml" />
+    <Content Include="Views\Patient\AddComplain.cshtml" />
+    <Content Include="Views\Patient\ListOfComplains.cshtml" />
+    <Content Include="Views\Patient\DeleteComplain.cshtml" />
+    <Content Include="Views\Patient\EditComplain.cshtml" />
+    <Content Include="Views\Admin\ListOfComplains.cshtml" />
+    <Content Include="Views\Admin\EditComplain.cshtml" />
+    <Content Include="Views\Admin\DeleteComplain.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -855,6 +884,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812091257446_AddAnnouncementInDB.resx">
       <DependentUpon>201812091257446_AddAnnouncementInDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101150218_AddStatusInDoctorDb.resx">
+      <DependentUpon>201812101150218_AddStatusInDoctorDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812111616517_AddComplaintInDB.resx">
+      <DependentUpon>201812111616517_AddComplaintInDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812111731557_AddReplyInComplaintDB.resx">
+      <DependentUpon>201812111731557_AddReplyInComplaintDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812111825200_DropRiviewFromDb.resx">
+      <DependentUpon>201812111825200_DropRiviewFromDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

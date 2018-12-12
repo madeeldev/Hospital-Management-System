@@ -106,3 +106,8 @@ D:\University\Project\Hospital-Management-System\Hospital Management System\Hosp
 D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Release\Hospital Management System.csproj.GenerateResource.Cache
 D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Release\Hospital Management System.dll
 D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Release\Hospital Management System.pdb
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Release\Hospital_Management_System.Migrations.AddAnnouncementInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Release\Hospital_Management_System.Migrations.AddStatusInDoctorDb.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Release\Hospital_Management_System.Migrations.AddComplaintInDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Release\Hospital_Management_System.Migrations.AddReplyInComplaintDB.resources
+D:\University\Project\Hospital-Management-System\Hospital Management System\Hospital Management System\obj\Release\Hospital_Management_System.Migrations.DropRiviewFromDb.resources

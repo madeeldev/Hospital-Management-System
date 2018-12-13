@@ -109,7 +109,8 @@
                     @Html.ActionLink("List of Ambulance", "ListOfAmbulances", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
                     @Html.ActionLink("Add Driver", "AddAmbulanceDriver", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
                     @Html.ActionLink("List of Driver", "ListOfAmbulanceDrivers", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })
-                </div>
+                    @Html.ActionLink("Check Optimal Path", "FindOptimalPath", "Admin", null, new { @class = "list-group-item", @style = "margin: 0px -20px; font-size: 13px" })                    
+                    </div>
             </li>
             @Html.Partial("_LoginPartial")
         </ul>

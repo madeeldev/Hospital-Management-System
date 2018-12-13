@@ -905,5 +905,13 @@ namespace Hospital_Management_System.Controllers
             db.SaveChanges();
             return RedirectToAction("ListOfComplains");
         }
+
+        // Show ambulance shortest path
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult FindOptimalPath()
+        {
+            return View();
+        }
     }
 }
